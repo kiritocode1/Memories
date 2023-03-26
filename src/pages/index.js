@@ -2,10 +2,16 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
+import CreditsCard from '@/Components/CreditsCard'
+import GithubCard from '@/Components/GithubCard'
+import MainPart from "@/Components/MainPart"; 
+ 
+const inter = Inter({ subsets: [ 'latin' ] })
 
-const inter = Inter({ subsets: ['latin'] })
+
 
 export default function Home() {
+
   return (
     <>
       <Head>
@@ -14,27 +20,17 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        <div className={styles.description}>
-          <p>
-            Made with 💖 by
-            <code className={styles.code}> Riya , Sakshi and Aryan</code>
-          </p>
-          <div>
-            <a
-              href="https://github.com/kiritocode1/Memories"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={"text-slate-500"}
-            >
-              MEMORIES v.0.1 / code
-            </a>
-          </div>
+      <main className="flex flex-col justify-center items-center p-[6rem] bg-black text-white min-h-[100vh]">
+        <div className="flex  items-center  justify-around gap-20  w-full flex-wrap">
+          <CreditsCard />
+          <GithubCard/>
         </div>
 
         <div className={ styles.center }>
           <h1>Memories - Ai Powered mental health helper </h1>
         </div>
+        
+        <MainPart/>
 
       </main>
     </>
