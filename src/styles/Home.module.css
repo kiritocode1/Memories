@@ -83,6 +83,7 @@
   position: relative;
   padding: 4rem 0;
   font-family:'Comfortaa', cursive;
+  font-size: 40px;
 }
 
 .center::before {
@@ -98,6 +99,7 @@
   width: 240px;
   height: 180px;
   z-index: -1;
+  font-family: var(--main-font); 
 }
 
 .center::before,
@@ -259,6 +261,10 @@
 @media (min-width: 701px) and (max-width: 1120px) {
   .grid {
     grid-template-columns: repeat(2, 50%);
+  } 
+
+  .center{
+    font-size: 10px;
   }
 }
 
