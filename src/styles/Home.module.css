@@ -1,3 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Roboto:wght@300&display=swap');
+
+
 .main {
   display: flex;
   flex-direction: column;
@@ -78,6 +82,7 @@
   align-items: center;
   position: relative;
   padding: 4rem 0;
+  font-family:'Comfortaa', cursive;
 }
 
 .center::before {
@@ -275,4 +280,9 @@
   to {
     transform: rotate(0deg);
   }
+}
+.input-center{
+  display: flex;
+  justify-content: center;
+
 }
