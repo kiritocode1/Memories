@@ -20,7 +20,7 @@ const MainPart = () => {
 				},
 				body: JSON.stringify({ request: Input }),
 			});
-			//console.log("Req sent !!!");
+
 			const data = await response.json();
 			if (response.status !== 200) {
 				throw (
