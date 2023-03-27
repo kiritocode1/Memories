@@ -10,7 +10,7 @@ const MainPart = () => {
 	const [Result, setResult] = useState("");
 
   async function onSubmit(event) {
-		event.preventDefault();
+		event.preventDefault(); // stop what it does normally
 
 		try {
 			const response = await fetch("/api/generate", {
@@ -21,7 +21,7 @@ const MainPart = () => {
 				body: JSON.stringify({ request: Input }),
 			});
 
-			const data = await response.json();
+			const data = await response.json(); // extracted data here . 
 			if (response.status !== 200) {
 				throw (
 					data.error ||
@@ -63,14 +63,23 @@ const MainPart = () => {
 					required
 					shadow
 					minrows={10}
-					fullWidth
+				  fullWidth
+				  
+
 					onKeyDown={(e) => {
 						if (e.key === "Enter") {
-							onSubmit(e);
+							onSubmit(e); // calls this function on enter
 						}
-					}}
+				  } }
+				  
+
+
+
+
+
 					onChange={(e) => {
-						setInput(e.target.value);
+						setInput(e.target.value); // records the keyboard input 
+						// oh user has pressed enter 
 						//console.log(Input);
 					}}
 					value={Input}

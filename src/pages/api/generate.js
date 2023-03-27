@@ -1,11 +1,22 @@
 import { Configuration, OpenAIApi } from "openai";
 
+
+
+
+
 const configuration = new Configuration({
   apiKey: process.env.OPENAI_API_KEY,
 });
+// keyy is needed to verify its us , config checks if the key is valid or not , if not it will throw an error ,
+
+
 const openai = new OpenAIApi(configuration);
+// openai is the api , we are using it to create a completion ,
+
 
 export default async function gg(req, res) {
+
+
   if (!configuration.apiKey) {
     res.status(500).json({
       error: {
@@ -15,8 +26,11 @@ export default async function gg(req, res) {
     });
     return;
   }
+  
 
   const Request = req.body.request || "";
+
+
   if (Request.trim().length === 0) {
     res.status(400).json({
       error: {
@@ -33,8 +47,10 @@ export default async function gg(req, res) {
       prompt: generatePrompt(Request),
       temperature: 0.9,
       max_tokens:3000, 
-    });
-
+    }); 
+    // 200 -> ok
+    // 300 -> server error 
+    // 400 -> bad request by user [eg 404]
     res.status(200).json({ result: completion.data.choices[0].text });
   } catch (error) {
     // Consider adjusting the error handling logic for your use case
