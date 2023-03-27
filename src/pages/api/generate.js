@@ -86,6 +86,7 @@ function generatePrompt(Result) {
     also give me a medical solution , if applicable and safe to consume . 
 
     based on the history and convo , i want you to tell me the problems i have or might possibly develop explicitly spell it out , eg " i think you might have ADHD " , 
+
     //Important!
     dont just suggest  to go to a therapist , i want you to give me a solution ,
     i cant really talk with another person about this`;
