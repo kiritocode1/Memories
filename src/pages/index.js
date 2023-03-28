@@ -5,6 +5,7 @@ import styles from '@/styles/Home.module.css'
 import CreditsCard from '@/Components/CreditsCard'
 import GithubCard from '@/Components/GithubCard'
 import MainPart from "@/Components/MainPart"; 
+import ExplainCard from '@/Components/ExplainCard'
  
 const inter = Inter({ subsets: [ 'latin' ] })
 
@@ -30,8 +31,8 @@ export default function Home() {
           <h1>Memories - Ai Powered mental health helper </h1>
         </div>
         
-        <MainPart/>
-
+        <MainPart />
+        <ExplainCard/>
       </main>
     </>
   )
