@@ -8,8 +8,7 @@ const GithubCard = () => {
 			color='secondary'
 			block
 			target={'_blank'}
-			rel='noopener noreferrer'
-		>
+			rel='noopener noreferrer'>
 			Version 0.1 / @github
 		</Link>
 	)

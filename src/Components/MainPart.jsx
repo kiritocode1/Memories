@@ -35,7 +35,7 @@ const MainPart = () => {
 
 	return (
 		<div className='flex flex-wrap justify-evenly  items-center w-full '>
-			<div className='w-60'>
+			<div className=' flex flex-wrap my-20'>
 				{/* Input area */}
 				<Textarea
 					labelPlaceholder='
@@ -45,8 +45,7 @@ const MainPart = () => {
 					animated
 					required
 					shadow
-					minrows={10}
-					fullWidth
+					width="400px"
 					onKeyDown={(e) => {
 						if (e.key === 'Enter') {
 							onSubmit(e) // calls this function on enter
@@ -57,7 +56,9 @@ const MainPart = () => {
 						// oh user has pressed enter
 						//console.log(Input);
 					}}
-					value={Input}
+					value={ Input }
+					size="xl"
+
 				/>
 			</div>
 			<div>
@@ -70,6 +71,7 @@ const MainPart = () => {
 						width='400px'
 						hidden={Result === '' ? true : false}
 						label='Memory says '
+						
 					/>
 				</span>
 			</div>
